@@ -68,8 +68,8 @@ However, when using Docker, or when needing to access files outside of the home 
 The easiest method is to specify the same common path on the host and container.
 For example, if trying to access two resource files at:
 ```bash
-/data/resources/cisTarget/motifs/motifs-v9-nr.hgnc-m0.001-o0.0.tbl
-/data/resources/cisTarget/databases/hg38__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather
+/data/HCA_analysis/cisTarget/motifs/motifs-v9-nr.hgnc-m0.001-o0.0.tbl
+/data/HCA_analysis/cisTarget/databases/hg38__refseq-r80__500bp_up_and_100bp_down_tss.mc9nr.feather
 ```
 Mounting the `/data` volume is sufficient.
 The container would need to be started as:
