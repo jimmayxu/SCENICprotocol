@@ -8,7 +8,7 @@
 runID="cisTopic_fetal_lung"
 
 # prepare output folder
-OUTDIR="${runID}"
+OUTDIR="HCA_analysis/$runID"
 
 mkdir -p "$OUTDIR/FarmOut"
 rm -f \
@@ -28,7 +28,7 @@ bsub \
 	-n "$CORES" \
 	-M"$MEM" \
 	-R"select[mem>$MEM] rusage[mem=$MEM] span[hosts=1]" \
-	"bash run_cisTopic.sh $OUTDIR $CORES 1>&2"
+	"bash ./cluster_submission/run_cisTopic.sh $OUTDIR $CORES 1>&2"
 
 # watch
 echo "PEND ...waiting for job to start"
