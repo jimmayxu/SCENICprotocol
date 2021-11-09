@@ -4,11 +4,19 @@
 #                  submit job for run_cisTopic.sh                    #
 #######################################################################
 
+#./cluster_submission/submit_cisTopic.sh "vas_GHM" "covid19cellatlas.vas_GHM.loom"
+#!./cluster_submission/submit_cisTopic.sh "fetal_lung" "covid19cellatlas.Fetal_lung.loom"
+#!./cluster_submission/submit_cisTopic.sh "fetal_liver" "covid19cellatlas.Fetal_liver.loom"
+
+
+
+
 # ID of run instance (e.g. loop over to submit several jobs)
-runID="cisTopic_fetal_lung"
+runID="$1"
+LOOM="$2"
+OUTDIR="HCA_analysis/cisTopic_$runID"
 
 # prepare output folder
-OUTDIR="HCA_analysis/$runID"
 
 mkdir -p "$OUTDIR/FarmOut"
 rm -f \
@@ -28,7 +36,7 @@ bsub \
 	-n "$CORES" \
 	-M"$MEM" \
 	-R"select[mem>$MEM] rusage[mem=$MEM] span[hosts=1]" \
-	"bash ./cluster_submission/run_cisTopic.sh $OUTDIR $CORES 1>&2"
+	"bash ./cluster_submission/run_cisTopic.sh $runID $CORES $LOOM 1>&2"
 
 # watch
 echo "PEND ...waiting for job to start"

@@ -4,11 +4,15 @@
 #                  submit job for run_AUCell.sh                       #
 #######################################################################
 
-# ID of run instance (e.g. loop over to submit several jobs)
-runID="AUCell_fetal_lung"
+#./cluster_submission/submit_AUCell.sh "fetal_lung" "covid19cellatlas.Fetal_lung.loom"
+#./cluster_submission/submit_AUCell.sh "fetal_liver" "covid19cellatlas.Fetal_liver.loom"
 
-# prepare output folder
-OUTDIR="${runID}"
+
+
+# ID of run instance (e.g. loop over to submit several jobs)
+runID="$1"
+LOOM="$2"
+OUTDIR="HCA_analysis/AUCell_$runID"
 
 mkdir -p "$OUTDIR/FarmOut"
 rm -f \
@@ -28,7 +32,7 @@ bsub \
 	-n "$CORES" \
 	-M"$MEM" \
 	-R"select[mem>$MEM] rusage[mem=$MEM] span[hosts=1]" \
-	"bash run_AUCell.sh $OUTDIR $CORES 1>&2"
+	"bash run_AUCell.sh $runID $CORES $LOOM 1>&2"
 
 # watch
 echo "PEND ...waiting for job to start"
