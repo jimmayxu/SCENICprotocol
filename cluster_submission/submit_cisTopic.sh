@@ -4,9 +4,7 @@
 #                  submit job for run_cisTopic.sh                    #
 #######################################################################
 
-#./cluster_submission/submit_cisTopic.sh "vas_GHM" "covid19cellatlas.vas_GHM.loom"
-#!./cluster_submission/submit_cisTopic.sh "fetal_lung" "covid19cellatlas.Fetal_lung.loom"
-#!./cluster_submission/submit_cisTopic.sh "fetal_liver" "covid19cellatlas.Fetal_liver.loom"
+#./cluster_submission/submit_cisTopicAUCell.sh "vas_13" "adult13_vas_20211026.loom"
 
 
 
@@ -26,8 +24,8 @@ rm -f \
 # submit job
 echo "submitting job for $runID..."
 
-MEM=50000
-CORES=30
+MEM=200000
+CORES=60
 bsub \
 	-q long \
 	-J"cisTopicJob$runID" \

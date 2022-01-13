@@ -1,0 +1,43 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@node-10-3-3>
+Subject: Job 95675: <grnboostJobgrnboost_vas_GHM> in cluster <farm5> Exited
+
+Job <grnboostJobgrnboost_vas_GHM> was submitted from host <farm5-gpu0106> by user <zx3> in cluster <farm5> at Thu Oct 14 18:30:37 2021
+Job was executed on host(s) <60*node-10-3-3>, in queue <parallel>, as user <zx3> in cluster <farm5> at Fri Oct 15 13:29:05 2021
+</nfs/users/nfs_z/zx3> was used as the home directory.
+</nfs/team205/zx3/PycharmProject/SCENICprotocol> was used as the working directory.
+Started at Fri Oct 15 13:29:05 2021
+Terminated at Fri Oct 15 13:29:07 2021
+Results reported at Fri Oct 15 13:29:07 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash run_grnboost.sh HCA_analysis/grnboost_vas_GHM 60 covid19cellatlas.vas_GHM.loom
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.10 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     200000.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   3 sec.
+    Turnaround time :                            68310 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <HCA_analysis/grnboost_vas_GHM/FarmOut/stderr.log> for stderr output of this job.
+

@@ -18,6 +18,36 @@ python HCA_analysis/data_type_convert.py -H 'deprez19_restricted.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'Single_cell_gene_expression_profiling_of_SARS_CoV_2_infected_human_cell_lines_H1299-27.h5ad'
 
 python HCA_analysis/data_type_convert.py -H 'adult13_vas_20211026.h5ad'
+
+python HCA_analysis/data_type_convert.py -H 'madissoon19_lung.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'baron16.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'cheng18.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'guo18_donor.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'habib17.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'aldinger20.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'henry18_0.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'james20.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'lako_cornea.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'litvinukova20_restricted.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'macparland18.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'vallier_restricted.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'byrd20_gingiva.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'warner20_salivary_gland.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'byrd_warner_integrated.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'smillie19_epi.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'stewart19_adult.processed.h5ad'
+
+python HCA_analysis/data_type_convert.py -H 'voigt19.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'menon19.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'lukowski19.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'vento18_10x.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'vento18_ss2.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'wang20_colon.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'martin19.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'wang20_ileum.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'wang20_rectum.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'madissoon20_spleen.processed.h5ad'
+
 """
 
 

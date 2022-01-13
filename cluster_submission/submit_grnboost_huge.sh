@@ -1,19 +1,17 @@
 #!/bin/bash
 
 #######################################################################
-#                  submit job for run_AUCell.sh                       #
+#                  submit job for run_grnboost.sh                     #
 #######################################################################
-
-#./cluster_submission/submit_AUCell.sh "Fetal_lung" "covid19cellatlas.Fetal_lung.loom"
-#./cluster_submission/submit_AUCell.sh "Fetal_liver" "covid19cellatlas.Fetal_liver.loom"
-#./cluster_submission/submit_AUCell.sh "vas_13" "adult13_vas_20211026.loom"
-
 
 
 # ID of run instance (e.g. loop over to submit several jobs)
+
+# prepare output folder
+
 runID="$1"
 LOOM="$2"
-OUTDIR="HCA_analysis/AUCell_$runID"
+OUTDIR="HCA_analysis/grnboost_$runID"
 
 mkdir -p "$OUTDIR/FarmOut"
 rm -f \
@@ -23,17 +21,17 @@ rm -f \
 # submit job
 echo "submitting job for $runID..."
 
-MEM=100000
-CORES=30
+MEM=600000
+CORES=100
 bsub \
-	-q long \
-	-J"AUCellJob$runID" \
+	-q basement \
+	-J "grnboostJob$runID" \
 	-e "$OUTDIR/FarmOut/stderr.log" \
 	-o "$OUTDIR/FarmOut/stdout.log" \
 	-n "$CORES" \
 	-M"$MEM" \
 	-R"select[mem>$MEM] rusage[mem=$MEM] span[hosts=1]" \
-	"bash run_AUCell.sh $runID $CORES $LOOM 1>&2"
+	"bash ./cluster_submission/run_grnboost.sh $runID $CORES $LOOM" 1>&2
 
 # watch
 echo "PEND ...waiting for job to start"
