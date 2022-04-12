@@ -19,8 +19,8 @@ python HCA_analysis/data_type_convert.py -H 'Single_cell_gene_expression_profili
 
 python HCA_analysis/data_type_convert.py -H 'adult13_vas_20211026.h5ad'
 
-python HCA_analysis/data_type_convert.py -H 'madissoon19_lung.processed.h5ad'
-python HCA_analysis/data_type_convert.py -H 'baron16.processed.h5ad'
+! python HCA_analysis/data_type_convert.py -H 'madissoon19_lung.processed.h5ad'
+! python HCA_analysis/data_type_convert.py -H 'baron16.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'cheng18.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'guo18_donor.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'habib17.processed.h5ad'
@@ -28,7 +28,7 @@ python HCA_analysis/data_type_convert.py -H 'aldinger20.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'henry18_0.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'james20.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'lako_cornea.processed.h5ad'
-python HCA_analysis/data_type_convert.py -H 'litvinukova20_restricted.processed.h5ad'
+! python HCA_analysis/data_type_convert.py -H 'litvinukova20_restricted.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'macparland18.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'vallier_restricted.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'byrd20_gingiva.processed.h5ad'
@@ -47,6 +47,9 @@ python HCA_analysis/data_type_convert.py -H 'martin19.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'wang20_ileum.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'wang20_rectum.processed.h5ad'
 python HCA_analysis/data_type_convert.py -H 'madissoon20_spleen.processed.h5ad'
+python HCA_analysis/data_type_convert.py -H 'madissoon20_oesophagus.processed.h5ad'
+
+python HCA_analysis/data_type_convert.py -H 'PAN.A01.v01.raw_count.20210429.PFI.embedding.h5ad'
 
 """
 
@@ -89,7 +92,7 @@ if __name__ == '__main__':
         aa = np.loadtxt(os.path.join('HCA_analysis/human-TF2021.txt'), dtype=str)
         set(adataset.var.index).intersection(set(aa))
         # d = pd.DataFrame(adataset.X, index=adataset.obs.index, columns=adataset.var.index)
-    
+        
         bb = sc.read_loom(os.path.join(output_folder, loom_name))
     
         aa = sc.read_loom('example/expr_mat.loom')

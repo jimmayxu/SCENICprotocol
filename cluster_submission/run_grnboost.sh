@@ -25,5 +25,5 @@ arboreto_with_multiprocessing.py \
 	${f_tfs} \
 	--method grnboost2 \
 	--output "${outdir}/adj.csv" \
-	--num_workers $((cores)) \
-	--seed 777
+	--num_workers $((cores))
+	#--seed 777

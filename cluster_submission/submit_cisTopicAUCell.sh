@@ -38,7 +38,7 @@
 
 
 # ID of run instance (e.g. loop over to submit several jobs)
-runID="$1"
+runID="$1"a
 LOOM="$2"
 queue="long"
 
